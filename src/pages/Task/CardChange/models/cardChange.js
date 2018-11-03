@@ -1,0 +1,35 @@
+import { queryRecord } from '../services/api';
+
+export default {
+  namespace: 'cardChange',
+
+  state: {
+    data: {
+      list: [],
+      pagination: {},
+    },
+  },
+
+  effects: {
+    // 查询
+    *fetch({ payload, callback }, { call, put }) {
+      const response = yield call(queryRecord, payload);
+      if (response.success) {
+        yield put({
+          type: 'save',
+          payload: response,
+        });
+      }
+      if (callback) callback(response);
+    },
+  },
+
+  reducers: {
+    save(state, action) {
+      return {
+        ...state,
+        data: action.payload.data,
+      };
+    },
+  },
+};
