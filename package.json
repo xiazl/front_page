@@ -40,6 +40,7 @@
     "lodash-decorators": "^6.0.0",
     "memoize-one": "^4.0.0",
     "moment": "^2.22.2",
+    "node-rsa": "^1.0.1",
     "numeral": "^2.0.6",
     "nzh": "^1.0.3",
     "omit.js": "^1.0.0",
@@ -53,7 +54,8 @@
     "react-document-title": "^2.0.3",
     "react-dom": "^16.5.1",
     "react-fittext": "^1.0.0",
-    "react-router-dom": "^4.3.1"
+    "react-router-dom": "^4.3.1",
+    "reconnectingwebsocket": "^1.0.0"
   },
   "devDependencies": {
     "@types/react": "^16.4.16",
